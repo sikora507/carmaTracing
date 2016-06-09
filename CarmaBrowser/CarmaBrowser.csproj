@@ -7,8 +7,8 @@
     <ProjectGuid>{EA16BDA3-F724-4B62-B87A-88D864F7B75B}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MvvmLight1</RootNamespace>
-    <AssemblyName>MvvmLight1</AssemblyName>
+    <RootNamespace>CarmaBrowser</RootNamespace>
+    <AssemblyName>CarmaBrowser</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvvmLight1", "MvvmLight1\MvvmLight1.csproj", "{EA16BDA3-F724-4B62-B87A-88D864F7B75B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarmaBrowser", "CarmaBrowser\CarmaBrowser.csproj", "{EA16BDA3-F724-4B62-B87A-88D864F7B75B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
