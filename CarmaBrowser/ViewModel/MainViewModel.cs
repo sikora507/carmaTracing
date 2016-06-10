@@ -1,7 +1,7 @@
 ﻿using GalaSoft.MvvmLight;
-using MvvmLight1.Model;
+using CarmaBrowser.Model;
 
-namespace MvvmLight1.ViewModel
+namespace CarmaBrowser.ViewModel
 {
     /// <summary>
     /// This class contains properties that the main View can data bind to.

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace MvvmLight1.Model
+namespace CarmaBrowser.Model
 {
     public class DataService : IDataService
     {

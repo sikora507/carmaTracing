@@ -1,7 +1,7 @@
 ﻿/*
   In App.xaml:
   <Application.Resources>
-      <vm:ViewModelLocatorTemplate xmlns:vm="clr-namespace:MvvmLight1.ViewModel"
+      <vm:ViewModelLocatorTemplate xmlns:vm="clr-namespace:CarmaBrowser.ViewModel"
                                    x:Key="Locator" />
   </Application.Resources>
   
@@ -12,9 +12,9 @@
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Ioc;
 using Microsoft.Practices.ServiceLocation;
-using MvvmLight1.Model;
+using CarmaBrowser.Model;
 
-namespace MvvmLight1.ViewModel
+namespace CarmaBrowser.ViewModel
 {
     /// <summary>
     /// This class contains static references to all the view models in the

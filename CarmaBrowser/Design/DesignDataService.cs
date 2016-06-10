@@ -1,7 +1,7 @@
 ﻿using System;
-using MvvmLight1.Model;
+using CarmaBrowser.Model;
 
-namespace MvvmLight1.Design
+namespace CarmaBrowser.Design
 {
     public class DesignDataService : IDataService
     {
