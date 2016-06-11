@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"
         xmlns:ignore="http://www.galasoft.ch/ignore"
+        xmlns:Views="clr-namespace:CarmaBrowser.UiComponents"
         mc:Ignorable="d ignore"
         Title="Carma Browser" Height="600" Width="900"
         ResizeMode="CanResizeWithGrip"
@@ -25,16 +26,23 @@
             </Button>
         </Controls:WindowCommands>
     </Controls:MetroWindow.RightWindowCommands>
-
-    <Grid x:Name="LayoutRoot">
-
-        <TextBlock FontSize="36"
-                   FontWeight="Bold"
-                   Foreground="Purple"
-                   Text="{Binding WelcomeTitle}"
-                   VerticalAlignment="Center"
-                   HorizontalAlignment="Center"
-                   TextWrapping="Wrap" />
-
+    <Controls:MetroWindow.Flyouts>
+        <Controls:FlyoutsControl>
+            <Controls:Flyout Position="Right" AreAnimationsEnabled="True" Header="Settings" IsModal="True" IsOpen="{Binding Path=Settings.IsSettingsFlyoutOpen, Mode=TwoWay}">
+                <Views:SettingsView DataContext="{Binding Settings}"/>
+            </Controls:Flyout>
+        </Controls:FlyoutsControl>
+    </Controls:MetroWindow.Flyouts>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.Resources>
+            <ResourceDictionary Source="pack://application:,,,/Mahapps.Metro;component/Styles/Controls.AnimatedTabControl.xaml" />
+        </Grid.Resources>
+        <StatusBar Grid.Row="1" HorizontalAlignment="Stretch">
+            <StatusBarItem HorizontalAlignment="Right" Margin="0,0,15,0">Carmegeddon data browser by Tomasz Sikora</StatusBarItem>
+        </StatusBar>
     </Grid>
 </Controls:MetroWindow>
