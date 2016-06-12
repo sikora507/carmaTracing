@@ -89,6 +89,12 @@
     <Compile Include="Services\FilesService.cs" />
     <Compile Include="Services\IFilesService.cs" />
     <Compile Include="Services\SettingsService.cs" />
+    <Compile Include="UiComponents\Cars\CarsView.xaml.cs">
+      <DependentUpon>CarsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UiComponents\Pix\PixView.xaml.cs">
+      <DependentUpon>PixView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ViewModelLocator.cs" />
     <Compile Include="UiComponents\Settings\SettingsModel.cs" />
     <Compile Include="UiComponents\Settings\SettingsView.xaml.cs">
@@ -118,6 +124,14 @@
     <Page Include="Skins\MainSkin.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UiComponents\Cars\CarsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UiComponents\Pix\PixView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UiComponents\Settings\SettingsView.xaml">
       <SubType>Designer</SubType>
