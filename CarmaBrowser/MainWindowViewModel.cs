@@ -3,15 +3,10 @@ using CarmaBrowser.UiComponents.Settings;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.CommandWpf;
 using GalaSoft.MvvmLight.Ioc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CarmaBrowser
 {
-    class MainWindowViewModel : ViewModelBase
+    public class MainWindowViewModel : ViewModelBase
     {
         //private readonly PixViewModel _pixViewModel;
         private RelayCommand _openSettingsCommand;

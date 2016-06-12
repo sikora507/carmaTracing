@@ -1,7 +1,5 @@
-﻿using GalaSoft.MvvmLight;
-using GalaSoft.MvvmLight.Ioc;
+﻿using GalaSoft.MvvmLight.Ioc;
 using Microsoft.Practices.ServiceLocation;
-using CarmaBrowser.Model;
 using CarmaBrowser.UiComponents.Settings;
 using CarmaBrowser.Services;
 
@@ -39,6 +37,11 @@ namespace CarmaBrowser.ViewModel
         public SettingsViewModel Settings
         {
             get { return ServiceLocator.Current.GetInstance<SettingsViewModel>(); }
+        }
+
+        public MainWindowViewModel Main
+        {
+            get { return ServiceLocator.Current.GetInstance<MainWindowViewModel>(); }
         }
         /// <summary>
         /// Cleans up all the resources.
