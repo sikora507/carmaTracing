@@ -7,6 +7,62 @@
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
-        <Label>Cars view</Label>
+        <Viewport3D>
+            <Viewport3D.Camera>
+                <!--<PerspectiveCamera Position="0, 40, -40" LookDirection="0,0,0" UpDirection="0,1,0" />-->
+                <PerspectiveCamera Position="0,60,40" LookDirection="0,-40,-40" UpDirection="0,1,0" x:Name="_camera" />
+            </Viewport3D.Camera>
+            <ModelVisual3D>
+                <ModelVisual3D.Transform>
+                    <TranslateTransform3D OffsetX="30" OffsetY="30" OffsetZ="30"/>
+                </ModelVisual3D.Transform>
+                <ModelVisual3D.Content>
+                    <Model3DGroup>
+                        <!--<SpotLight Color="White" Direction="-30,-30,-30" x:Name="_light" />-->
+                        <PointLight Color="White" Position="40,40,40"/>
+                        <AmbientLight>
+                            <AmbientLight.Color>
+                                <Color A="0" B="24" G="24" R="23" />
+                            </AmbientLight.Color>
+                        </AmbientLight>
+                    </Model3DGroup>
+                </ModelVisual3D.Content>
+            </ModelVisual3D>
+            <ModelVisual3D>
+                <ModelVisual3D.Transform>
+                    <RotateTransform3D>
+                        <RotateTransform3D.Rotation>
+                            <AxisAngleRotation3D Axis="0,1,0" Angle="45"/>
+                        </RotateTransform3D.Rotation>
+                    </RotateTransform3D>
+                </ModelVisual3D.Transform>
+                <ModelVisual3D.Content>
+                    <Model3DGroup>
+                        <GeometryModel3D>
+                            <GeometryModel3D.Geometry>
+                                <!--Positions="-10,0,0  10,0,0 -10,10,0 10,10,0" TriangleIndices="0 1 2  3 2 1"-->
+                                <MeshGeometry3D x:Name="_mesh" 
+                                                Positions="
+                                                -10,0,0    10,0,0    -10,20,0  10,20,0
+                                                -10,20,-20 10,20,-20 -10,0,-20 10,0,-20" 
+                                                TriangleIndices="
+                                                0 1 2 3 2 1
+                                                2,3,4 4,3,5
+                                                0,2,4 4,6,0
+                                                7,5,3 1,7,3
+                                                5,7,6 5,6,4
+                                                6,1,0 6,7,1"/>
+                            </GeometryModel3D.Geometry>
+                            <GeometryModel3D.Material>
+                                <MaterialGroup>
+                                    <DiffuseMaterial Brush="LightGreen"/>
+                                    <SpecularMaterial Brush="White" />
+                                </MaterialGroup>
+                            </GeometryModel3D.Material>
+                        </GeometryModel3D>
+                    </Model3DGroup>
+                </ModelVisual3D.Content>
+            </ModelVisual3D>
+        </Viewport3D>
     </Grid>
 </UserControl>
