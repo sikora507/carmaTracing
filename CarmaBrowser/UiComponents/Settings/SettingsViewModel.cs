@@ -1,11 +1,6 @@
-﻿using CarmaBrowser.Services;
-using GalaSoft.MvvmLight;
+﻿using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.CommandWpf;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Helpers.Contracts;
 
 namespace CarmaBrowser.UiComponents.Settings
 {

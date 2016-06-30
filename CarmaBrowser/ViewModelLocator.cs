@@ -2,6 +2,10 @@
 using Microsoft.Practices.ServiceLocation;
 using CarmaBrowser.UiComponents.Settings;
 using CarmaBrowser.Services;
+using CarmaCore.Contracts;
+using CarmaCore;
+using Helpers.Contracts;
+using Helpers;
 
 namespace CarmaBrowser.ViewModel
 {

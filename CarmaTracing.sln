@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarmaBrowser", "CarmaBrowse
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarmaCore", "CarmaCore\CarmaCore.csproj", "{1065CF29-7A4B-446B-BEFE-DAE962CE4E8E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helpers", "Helpers\Helpers.csproj", "{A1E534A9-C884-4DD6-9FE6-D3ECD4448784}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{1065CF29-7A4B-446B-BEFE-DAE962CE4E8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1065CF29-7A4B-446B-BEFE-DAE962CE4E8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1065CF29-7A4B-446B-BEFE-DAE962CE4E8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1E534A9-C884-4DD6-9FE6-D3ECD4448784}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1E534A9-C884-4DD6-9FE6-D3ECD4448784}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1E534A9-C884-4DD6-9FE6-D3ECD4448784}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1E534A9-C884-4DD6-9FE6-D3ECD4448784}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

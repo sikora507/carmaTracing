@@ -3,6 +3,7 @@ using CarmaBrowser.UiComponents.Settings;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.CommandWpf;
 using GalaSoft.MvvmLight.Ioc;
+using Helpers.Contracts;
 
 namespace CarmaBrowser
 {

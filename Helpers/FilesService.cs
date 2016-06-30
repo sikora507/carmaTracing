@@ -1,14 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using System;
+using Helpers.Contracts;
 
-namespace CarmaBrowser.Services
+namespace Helpers
 {
-    class FilesService : IFilesService
+    public class FilesService : IFilesService
     {
         public string BrowseDirectory()
         {
@@ -23,7 +22,8 @@ namespace CarmaBrowser.Services
                 return string.Empty;
             }
         }
-        public List<string> GetFiles(string directory, string extension = "")
+
+        public List<string> GetFilePaths(string directory, string extension = "")
         {
             if (!Directory.Exists(directory))
             {
@@ -39,6 +39,17 @@ namespace CarmaBrowser.Services
                 filePaths = Directory.GetFiles(directory, "*." + extension);
             }
             return filePaths.ToList();
+        }
+
+        public List<string> GetFilePaths(List<string> directories, string extension)
+        {
+            var results = new List<string>();
+            foreach (var directory in directories)
+            {
+                var directoryFiles = GetFilePaths(directory, extension);
+                results.AddRange(directoryFiles);
+            }
+            return results;
         }
     }
 }

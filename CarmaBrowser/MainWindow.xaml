@@ -42,13 +42,13 @@
             <ResourceDictionary Source="pack://application:,,,/Mahapps.Metro;component/Styles/Controls.AnimatedTabControl.xaml" />
         </Grid.Resources>
         <Controls:MetroAnimatedSingleRowTabControl Grid.Row="0" x:Name="MainTabControl">
-            <Controls:MetroTabItem Header="PIX">
+            <Controls:MetroTabItem Header="PIX" IsSelected="{Binding PixViewModel.IsSelected, Mode=OneWayToSource}">
                 <Views:PixView DataContext="{Binding PixViewModel}" />
             </Controls:MetroTabItem>
             <Controls:MetroTabItem Header="Cars">
                 <Views:CarsView />
             </Controls:MetroTabItem>
-            <Controls:MetroTabItem Header="GL Test" IsSelected="True">
+            <Controls:MetroTabItem Header="GL Test">
                 <Views:GLTestView />
             </Controls:MetroTabItem>
         </Controls:MetroAnimatedSingleRowTabControl>
