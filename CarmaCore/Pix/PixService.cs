@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using CarmaCore.Contracts;
 using System.IO;
 using Helpers.Contracts;
+using CarmaCore.Images;
+using System.Linq;
 
 namespace CarmaCore.Pix
 {
@@ -44,8 +46,24 @@ namespace CarmaCore.Pix
 
         public IList<PixDTO> GetAllPixData()
         {
+            // todo refactor - use some mapping for pix directories to palettes if possible
+            var palette1 = new PaletteFile(_paletteDirsFull[0]);
+            var palette2 = new PaletteFile(_paletteDirsFull[1]);
+
+            var result = new List<PixDTO>();
             var filePaths = _filesService.GetFilePaths(_pixDirs, "pix");
-            return new List<PixDTO>();
+            foreach (var filePath in filePaths)
+            {
+                PixFile pixFile = new PixFile(filePath, palette1);
+                result.Add(new PixDTO
+                {
+                    FileName = Path.GetFileName(filePath),
+                    FilePath = filePath,
+                    Images = pixFile.PixMaps.Select(x => x.BitmapSource).ToList()
+                });
+
+            }
+            return result;
         }
     }
 }
